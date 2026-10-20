@@ -9,8 +9,16 @@ public class HighscoreWinsApplication {
         String input = scanner.nextLine().trim();
 
         String[] sections = input.split(Pattern.quote("|"));
-        String teams = sections[0];
-        String scores = sections[1];
+        String teamsText = sections[0];
+        String scoresText = sections[1];
+
+        String[] teams = teamsText.split(":");
+        String homeTeam = teams[0];
+        String visitorTeam = teams[1];
+
+        String[] scores = scoresText.split(":");
+        int homeScore = Integer.parseInt(scores[0]);
+        int visitorScore = Integer.parseInt(scores[1]);
 
     }
 }
