@@ -20,5 +20,14 @@ public class HighscoreWinsApplication {
         int homeScore = Integer.parseInt(scores[0]);
         int visitorScore = Integer.parseInt(scores[1]);
 
+        if (homeScore > visitorScore) {
+            System.out.println("Winner: " + homeTeam);
+        } else if (visitorScore > homeScore) {
+            System.out.println("Winner: " + visitorTeam);
+        } else {
+            System.out.println("Winner: Tie!");
+
+        }
     }
-}
+
+    }
